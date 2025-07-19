@@ -45,14 +45,24 @@
   <section id="hierarchie-section" style="display:none;"></section>
   <section id="dispos-section" style="display:none;"></section>
   <section id="quota-section" style="display:none;"></section>
-  <script src="config.js"></script>
+  <!-- La config Firebase est maintenant incluse ici pour GitHub Pages. Pense à sécuriser tes règles Firebase ! -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
     import { getDatabase, ref, set, onValue, update } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
     import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-    // Utilise la config chargée dynamiquement
-    const app = initializeApp(window.firebaseConfig);
+    // Mets ici ta vraie config Firebase (copie depuis la console Firebase)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBnUXiWAiMrKZX8U0dWiS3AbYsF5mtP4Z4",
+      authDomain: "bratvanskia.firebaseapp.com",
+      databaseURL: "https://bratvanskia-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "bratvanskia",
+      storageBucket: "bratvanskia.firebasestorage.app",
+      messagingSenderId: "853876739650",
+      appId: "1:853876739650:web:319b1999b8aff52a30e7db",
+      measurementId: "G-27V0D9DXMR"
+    };
+    const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
     const auth = getAuth(app);
     window.firebaseApp = app;

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recettes de Munitions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7.1.3">
+</head>
+<body>
+  <canvas id="bubble-bg"></canvas>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="navbar-logo">Bratvanskia</div>
+      <label class="switch-darkmode">
+        <input type="checkbox" id="darkmode-toggle">
+        <span class="slider"></span>
+        <span class="switch-label">Mode sombre</span>
+      </label>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#" class="active" id="nav-munitions">Munitions</a></li>
+      <li><a href="#" id="nav-hierarchie">Hiérarchie</a></li>
+      <li><a href="#" id="nav-dispos"><span style="vertical-align:middle;">Disponibilités</span> <span style="color:#c00;font-size:1.1em;vertical-align:middle;">&#128274;</span></a></li>
+      <li><a href="#" id="nav-quota"><span style="vertical-align:middle;">Quota</span> <span style="color:#c00;font-size:1.1em;vertical-align:middle;">&#128274;</span></a></li>
+    </ul>
+    <div class="navbar-right">
+      <div id="auth-status" class="auth-status">
+        <button id="login-btn" class="auth-btn">Se connecter</button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Popup d'authentification -->
+  <div id="auth-popup" class="auth-popup">
+    <div class="auth-popup-content">
+      <span class="auth-popup-close">&times;</span>
+      <div id="auth-popup-container"></div>
+    </div>
+  </div>
+  <div id="page-title"></div>
+  <main id="recettes-container"></main>
+  <section id="hierarchie-section" style="display:none;"></section>
+  <section id="dispos-section" style="display:none;"></section>
+  <section id="quota-section" style="display:none;"></section>
+  <script src="config.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getDatabase, ref, set, onValue, update } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+    // Utilise la config chargée dynamiquement
+    const app = initializeApp(window.firebaseConfig);
+    const db = getDatabase(app);
+    const auth = getAuth(app);
+    window.firebaseApp = app;
+    window.firebaseDB = db;
+    window.firebaseRef = ref;
+    window.firebaseSet = set;
+    window.firebaseOnValue = onValue;
+    window.firebaseUpdate = update;
+    window.firebaseAuth = auth;
+    window.firebaseSignIn = signInWithEmailAndPassword;
+    window.firebaseSignOut = signOut;
+    window.firebaseOnAuthStateChanged = onAuthStateChanged;
+    window.firebaseCreateUser = createUserWithEmailAndPassword;
+  </script>
+  <script src="script.js"></script>
+  <div class="footer-card">
+    Ceci est un site réalisé pour un jeu vidéo, créé par Zyrexiw pour Grand Paris RP
+  </div>
+</body>
+</html> 

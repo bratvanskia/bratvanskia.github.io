@@ -1,0 +1,54 @@
+[
+  {
+    "nom": "9mm",
+    "couleur": "#4CAF50",
+    "prix": 112.5,
+    "ingredients": [
+      { "nom": "Douille", "quantite": 1 },
+      { "nom": "Amorce", "quantite": 1 },
+      { "nom": "Poudre", "quantite": 1 }
+    ]
+  },
+  {
+    "nom": "5.56",
+    "couleur": "#FF9800",
+    "prix": 262.5,
+    "ingredients": [
+      { "nom": "Douille", "quantite": 1 },
+      { "nom": "Amorce", "quantite": 4 },
+      { "nom": "Poudre", "quantite": 4 }
+    ]
+  },
+  {
+    "nom": "7.62",
+    "couleur": "#3F51B5",
+    "prix": 262.5,
+    "ingredients": [
+      { "nom": "Douille", "quantite": 1 },
+      { "nom": "Amorce", "quantite": 4 },
+      { "nom": "Poudre", "quantite": 4 }
+    ]
+  },
+  {
+    "nom": "12",
+    "couleur": "#E91E63",
+    "prix": 205,
+    "ingredients": [
+      { "nom": "Douille", "quantite": 1 },
+      { "nom": "Amorce", "quantite": 2 },
+      { "nom": "Poudre", "quantite": 2 },
+      { "nom": "Plomb", "quantite": 2 }
+    ]
+  },
+  {
+    "nom": ".50AE",
+    "couleur": "#9C27B0",
+    "prix": 205,
+    "ingredients": [
+      { "nom": "Douille", "quantite": 1 },
+      { "nom": "Amorce", "quantite": 2 },
+      { "nom": "Poudre", "quantite": 2 },
+      { "nom": "Plomb", "quantite": 2 }
+    ]
+  }
+] 
